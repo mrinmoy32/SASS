@@ -9,6 +9,5 @@
 // The CSS @import directive has a major drawback due to performance issues; it creates an extra HTTP request each time you call it. However, the Sass @import directive includes the file in the CSS; so no extra HTTP call is required at runtime!
 
 //e.g.
-@import "variables";
-@import "colors";
+
 @import "reset";
