@@ -1,0 +1,46 @@
+// Sass Variables
+
+$myFont: Helvetica, sans-serif;
+$myColor: red;
+$myFontSize: 18px;
+$myWidth: 680px;
+
+body {
+  font-family: $myFont;
+  font-size: $myFontSize;
+  color: $myColor;
+}
+
+#container {
+  width: $myWidth;
+}
+
+// Sass Variable Scope
+// Will the color of the text inside a <p> tag be red or green? It will be red!
+// The other definition, $myColor: green; is inside the <h1> rule, and will only be available there!
+
+$newColor: yellow;
+
+h1 {
+  $newColor: green;
+  color: $myColor;
+}
+
+p {
+  color: $myColor;
+}
+
+//Using Sass !global
+//The default behavior for variable scope can be overridden by using the !global switch.
+//!global indicates that a variable is global, which means that it is accessible on all levels.
+
+$nextColor: blue;
+
+h1 {
+  $nextColor: black !global;
+  color: $myColor;
+}
+
+p {
+  color: $myColor;
+}
