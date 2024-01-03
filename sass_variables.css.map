@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "sourceRoot": "",
+  "sources": [
+    "sass_variables.scss"
+  ],
+  "names": [],
+  "mappings": "AAOA;EACE,aANO;EAOP,WALW;EAMX,OAPQ;;;AAUV;EACE,OATQ;;;AAkBV;EAEE,OAtBQ;;;AAyBV;EACE,OA1BQ;;;AAmCV;EAEE,OArCQ;;;AAwCV;EACE,OAzCQ",
+  "file": "sass_variables.css"
+}
