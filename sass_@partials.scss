@@ -1,0 +1,16 @@
+// Sass Partials
+// By default, Sass transpiles all the .scss files directly. However, when you want to import a file, you do not need the file to be transpiled directly.
+
+// Sass has a mechanism for this: If you start the filename with an underscore, Sass will not transpile it. Files named this way are called partials in Sass.
+
+// So, a partial Sass file is named with a leading underscore:
+
+// _filename;
+
+@import "colors";
+
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  color: $myBlue;
+}
