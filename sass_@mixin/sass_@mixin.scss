@@ -1,0 +1,33 @@
+//Sass @mixin and @include
+
+// The @mixin directive lets you create CSS code that is to be reused throughout the website.
+
+// The @include directive is created to let you use (include) the mixin.
+
+//Defining a Mixin
+//----------------------------
+//The following example creates a mixin named "important-text":
+
+@mixin important-text {
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid blue;
+}
+
+//Using a Mixin
+//---------------------------------
+//So, to include the important-text mixin created above:
+
+.danger {
+  @include important-text;
+  background-color: green;
+}
+
+//A mixin can also include other mixins:
+//----------------------------------------------
+@mixin special-text {
+  @include important-text;
+  @include link;
+  @include special-border;
+}
