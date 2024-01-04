@@ -31,3 +31,52 @@
   @include link;
   @include special-border;
 }
+
+//Passing Variables to a Mixin
+//----------------------------------------
+//Mixins accept arguments. This way you can pass variables to a mixin.
+
+/* Define mixin with two arguments */
+@mixin bordered($color, $width) {
+  border: $width solid $color;
+}
+
+.myArticle {
+  @include bordered(blue, 1px); // Call mixin with two values
+}
+
+.myNotes {
+  @include bordered(red, 2px); // Call mixin with two values
+}
+
+// Default Values for a Mixin
+//--------------------------------------------
+// It is also possible to define default values for mixin variables:
+
+@mixin bordered($color: blue, $width: 1px) {
+  border: $width solid $color;
+}
+//Then, you only need to specify the values that change when you include the mixin:
+.myTips {
+  @include bordered($color: orange);
+}
+
+//Using a Mixin For Vendor Prefixes
+//-----------------------------------------
+//Another good use of a mixin is for vendor prefixes.
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+.myBox {
+  @include transform(rotate(20deg));
+}
+//After compilation, the CSS will look like this:
+//   .myBox {
+//     -webkit-transform: rotate(20deg);
+//     -ms-transform: rotate(20deg);
+//     transform: rotate(20deg);
+//   }
